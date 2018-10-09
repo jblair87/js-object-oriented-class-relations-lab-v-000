@@ -55,12 +55,12 @@ class Trip{
     }
      passengers() {
     return store.passengers.find(passenger => {
-      return passengerId == this.passenger.id;
+      return passenger.id == this.passengerId;
     });
   }
      drivers() {
      return store.drivers.find(driver => {
-      return driverId == this.driver.id;
+      return driver.id == this.driverId;
     });
   }
 }
