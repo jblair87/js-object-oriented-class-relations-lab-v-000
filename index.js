@@ -54,7 +54,7 @@ class Trip{
        store.trips.push(this);
     }
      passengers() {
-    return store.drivers.filter(trip => {
+    return store.drivers.find(passenger => {
       return passengerId == this.passenger.id;
     });
   }
