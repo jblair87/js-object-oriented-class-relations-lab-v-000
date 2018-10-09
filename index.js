@@ -52,7 +52,15 @@ class Trip{
        this.driverId = driver.id;
        this.passengerId = passenger.id;
        store.trips.push(this);
-
-
     }
+     passengers() {
+    return store.trips.filter(trip => {
+      return trip.passengerId == this.id;
+    });
+  }
+     drivers() {
+    return this.trips().map(trip => {
+      return trip.driver();
+    });
+  }
 }
