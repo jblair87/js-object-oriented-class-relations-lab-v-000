@@ -36,7 +36,7 @@ class Passenger{
       return trip.passengerId();
     });
   }
-     trips() {
+     passengers() {
     return this.trips().map(trip => {
       return trip.driverId();
     });
