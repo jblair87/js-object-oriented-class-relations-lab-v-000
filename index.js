@@ -11,8 +11,8 @@ class Driver{
     }
     
     trips() {
-    return this.trips().map(trip => {
-      return trip.passenger();
+    return store.trips.filter(trip => {
+      return trip.driverId();
     });
   }
     
