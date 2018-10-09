@@ -54,13 +54,13 @@ class Trip{
        store.trips.push(this);
     }
      passengers() {
-    return store.drivers.find(passenger => {
+    return store.passengers.find(passenger => {
       return passengerId == this.passenger.id;
     });
   }
      drivers() {
-    return this.trips().map(trip => {
-      return trip.driver();
+     return store.drivers.find(driver => {
+      return driverId == this.driver.id;
     });
   }
 }
