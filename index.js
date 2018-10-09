@@ -33,10 +33,14 @@ class Passenger{
     }
      trips() {
     return store.trips.filter(trip => {
+      return trip.passengerId();
+    });
+  }
+     trips() {
+    return store.trips.filter(trip => {
       return trip.driverId();
     });
   }
-    
 }
 
 let tripId = 0;
